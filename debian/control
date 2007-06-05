@@ -1,0 +1,16 @@
+Source: gtf
+Section: x11
+Priority: extra
+Maintainer: Stefan Lippers-Hollmann <s.l-h@gmx.de>
+Build-Depends: cdbs, debhelper (>= 5), dpatch
+Standards-Version: 3.7.2
+
+Package: gtf
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Conflicts: xserver-xorg-core
+Description: Generate mode timings using the GTF Timing Standard
+ This program takes a desired resolution and vertical refresh rate,
+ and computes mode timings according to the GTF Timing Standard.
+ These mode timings can then be formatted as an XFree86 modeline
+ or a mode description for use by fbset(8).

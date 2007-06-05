@@ -1,0 +1,10 @@
+gtf (0.0.20030615-1) ORPHANED; urgency=low
+
+  * NOT RELEASED YET
+  * ORPHANED
+  * Initial release.
+  * gtf was missing for a long time since X became modular, package it once
+    and for all.
+
+ -- Stefan Lippers-Hollmann <s.l-h@gmx.de>  Tue, 05 Jun 2007 18:43:57 +0200
+

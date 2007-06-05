@@ -1,0 +1,11 @@
+#!/usr/bin/make -f
+  
+include /usr/share/cdbs/1/rules/debhelper.mk
+include /usr/share/cdbs/1/rules/dpatch.mk
+
+build/gtf::
+	$(CC) gtf.c -o gtf -lm -Wall
+
+clean::
+	rm -f gtf
+

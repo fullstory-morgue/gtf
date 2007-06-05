@@ -1,0 +1,19 @@
+#! /bin/sh /usr/share/dpatch/dpatch-run
+## compile-fix.dpatch by Stefan Lippers-Hollmann <s.l-h@gmx.de>
+##
+## All lines beginning with `## DP:' are a description of the patch.
+## DP: No description.
+
+@DPATCH@
+diff -urNad gtf-0.0.20030615~/gtf.c gtf-0.0.20030615/gtf.c
+--- gtf-0.0.20030615~/gtf.c	2003-06-17 02:52:03.000000000 +0200
++++ gtf-0.0.20030615/gtf.c	2007-06-05 16:58:12.000000000 +0200
+@@ -107,7 +107,7 @@
+ #include <stdio.h>
+ #include <stdlib.h>
+ #include <math.h>
+-
++#include <string.h>
+ 
+ 
+ #define MARGIN_PERCENT    1.8   /* % of active vertical image                */

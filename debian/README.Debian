@@ -1,0 +1,46 @@
+The GTF EXCEL(TM) SPREADSHEET, a sample (and the definitive)
+implementation of the GTF Timing Standard, is available at:
+
+ftp://ftp.vesa.org/pub/GTF/GTF_V1R1.xls
+
+
+
+This program takes a desired resolution and vertical refresh rate,
+and computes mode timings according to the GTF Timing Standard.
+These mode timings can then be formatted as an XFree86 modeline
+or a mode description for use by fbset(8).
+
+
+
+NOTES:
+
+The GTF allows for computation of "margins" (the visible border
+surrounding the addressable video); on most non-overscan type
+systems, the margin period is zero.  I've implemented the margin
+computations but not enabled it because 1) I don't really have
+any experience with this, and 2) neither XFree86 modelines nor
+fbset fb.modes provide an obvious way for margin timings to be
+included in their mode descriptions (needs more investigation).
+
+The GTF provides for computation of interlaced mode timings;
+I've implemented the computations but not enabled them, yet.
+I should probably enable and test this at some point.
+
+
+
+TODO:
+
+o Add support for interlaced modes.
+
+o Implement the other portions of the GTF: compute mode timings
+  given either the desired pixel clock or the desired horizontal
+  frequency.
+
+o It would be nice if this were more general purpose to do things
+  outside the scope of the GTF: like generate double scan mode
+  timings, for example.
+  
+o Printing digits to the right of the decimal point when the
+  digits are 0 annoys me.
+
+o Error checking.
